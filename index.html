@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Aula Extra 4: Conectivos em Inglês – Tabela de Conjunções Coordenativas e Subordinativas</title>
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET E BASE --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            background-color: #f0f2f5;
+            color: #333;
+            -webkit-font-smoothing: antialiased;
+            padding: 20px 10px;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- TIPOGRAFIA --- */
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #16a085;
+            line-height: 1.3;
+        }
+
+        h2 {
+            color: #16a085;
+            margin: 35px 0 15px 0;
+            font-size: 1.45rem;
+            border-bottom: 2px solid #e8f8f5;
+            padding-bottom: 8px;
+        }
+
+        p { font-size: 1rem; margin-bottom: 12px; color: #444; }
+        .emoji-large { font-size: 1.4rem; }
+
+        /* --- INTRODUÇÃO --- */
+        .theme-intro {
+            background-color: #e8f8f5;
+            border-left: 5px solid #16a085;
+            padding: 20px;
+            margin: 20px 0 25px 0;
+            border-radius: 8px;
+            page-break-inside: avoid;
+        }
+
+        /* --- BARRA DE BUSCA RÁPIDA --- */
+        .search-box {
+            margin-bottom: 25px;
+            display: flex;
+            gap: 10px;
+        }
+        .search-input {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 1rem;
+            border: 2px solid #dcdde1;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.2s;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #16a085;
+        }
+
+        /* --- BOTÕES DE NAVEGAÇÃO E ÁUDIO --- */
+        .nav-btn {
+            display: block;
+            width: 100%;
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            margin: 15px 0 25px 0;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btn:hover { background-color: #2c3e50; }
+        
+        .audio-btn-word {
+            background-color: #e8f8f5;
+            border: 1px solid #a3e4d7;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            padding: 2px 6px;
+            margin-left: 6px;
+            vertical-align: middle;
+            transition: all 0.15s;
+        }
+        .audio-btn-word:hover { background-color: #16a085; color: #fff; }
+        .audio-btn-word:active { transform: scale(0.92); }
+
+        .audio-btn-inline {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            vertical-align: middle;
+            margin-left: 6px;
+            padding: 2px 4px;
+            transition: transform 0.1s;
+        }
+        .audio-btn-inline:active { transform: scale(0.9); }
+
+        /* --- CARDS DE CATEGORIA DE CONECTIVOS --- */
+        .category-card {
+            border: 1px solid #dcdde1;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            page-break-inside: avoid;
+        }
+
+        .category-header {
+            background: linear-gradient(90deg, #117864 0%, #16a085 100%);
+            color: #fff;
+            padding: 14px 18px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .category-header .subtitle {
+            font-size: 0.9rem;
+            color: #fef9e7;
+            font-weight: 500;
+        }
+
+        .category-tip {
+            background-color: #fff9e6;
+            color: #7d6608;
+            padding: 10px 16px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #f9e79f;
+        }
+
+        .conj-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .conj-table th {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 2px solid #bdc3c7;
+        }
+
+        .conj-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+            font-size: 0.95rem;
+        }
+
+        .conj-table tr:nth-child(even) { background-color: #fafafa; }
+        .conj-table tr:hover { background-color: #f0fdf4; }
+
+        .col-conj {
+            width: 22%;
+            font-weight: 700;
+            color: #0e6251;
+            font-size: 1.02rem;
+        }
+
+        .ipa-tag {
+            display: inline-block;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.8rem;
+            color: #c0392b;
+            background: #f1f1f1;
+            padding: 1px 5px;
+            border-radius: 4px;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        .phonetic-tag {
+            display: block;
+            font-size: 0.8rem;
+            color: #27ae60;
+            font-style: italic;
+            font-weight: 400;
+            margin-top: 2px;
+        }
+
+        .col-meaning {
+            width: 23%;
+            font-weight: 600;
+            color: #34495e;
+            font-size: 0.9rem;
+        }
+
+        .rule-note {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            font-weight: 400;
+            margin-top: 4px;
+        }
+
+        .col-example {
+            width: 55%;
+        }
+
+        .example-en {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .example-en b {
+            color: #d35400;
+            background-color: #fbeee6;
+            padding: 0 4px;
+            border-radius: 3px;
+            text-decoration: underline;
+        }
+
+        .example-pt {
+            display: block;
+            color: #27ae60;
+            font-style: italic;
+            font-size: 0.88rem;
+            margin-top: 4px;
+        }
+
+        /* --- QUIZ INTERATIVO --- */
+        .quiz-container {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+            page-break-inside: avoid;
+        }
+        .quiz-question { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+        .quiz-question:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .quiz-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 11px 15px;
+            margin: 7px 0;
+            border: 2px solid #e0e0e0;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+        .quiz-btn:hover:not(:disabled) { border-color: #16a085; background-color: #e8f8f5; }
+        .quiz-btn.correct { background-color: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .quiz-btn.incorrect { background-color: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .quiz-feedback { margin-top: 8px; font-size: 0.9rem; font-weight: bold; display: none; }
+
+        /* --- RESPONSIVIDADE MOBILE --- */
+        @media (max-width: 700px) {
+            .container { padding: 15px; }
+            .conj-table thead { display: none; }
+            .conj-table tr {
+                display: block;
+                border-bottom: 2px solid #e0e0e0;
+                padding: 10px 0;
+            }
+            .conj-table td {
+                display: block;
+                width: 100%;
+                border: none;
+                padding: 4px 12px;
+            }
+            .col-conj { font-size: 1.1rem; }
+            .col-meaning { color: #16a085; margin-bottom: 4px; }
+        }
+
+        /* --- IMPRESSÃO A4 EM PDF --- */
+        @media print {
+            body { background-color: #fff; padding: 0; font-size: 10.5pt; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .nav-btn, .audio-btn-inline, .audio-btn-word, .search-box { display: none !important; }
+            .category-card { page-break-inside: avoid; margin-bottom: 18px; border: 1px solid #999; }
+            .category-header { background: #117864 !important; color: #fff !important; padding: 8px 14px; }
+            .conj-table td, .conj-table th { padding: 6px 10px; }
+            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- BOTÃO TOPO -->
+        <button class="nav-btn" onclick="window.location.href='https://espaco-liberdade.github.io/inglesipa/'">⬅ Voltar ao Menu Principal</button>
+        
+        <h1>Aula Extra 4: Conectivos em Inglês – Mega Tabela de Conjunções <span class="emoji-large">🔗🗣️</span><br>
+            <span style="font-size: 0.6em; font-weight: normal; color: #555;">(Conjunções Coordenativas, Subordinativas, Correlativas e Transições Formais)</span>
+        </h1>
+        
+        <div class="theme-intro">
+            <p><strong>A Cola da Fluência: Fale e Escreva com Coesão e Elegância!</strong></p>
+            <p>Saber vocabulário e verbos permite que você forme frases curtas, mas são os <strong>conectivos (conjunctions & connectors)</strong> que permitem unir ideias, argumentar, contrastar, explicar causas e soar como um falante avançado.</p>
+            <p>🎧 <strong>Como estudar:</strong> Clique no áudio ao lado de <strong>cada conectivo</strong> para dominar sua pronúncia isolada (com IPA e guia fonético) e escute a <strong>frase completa de exemplo</strong> aplicando a regra gramatical na prática!</p>
+        </div>
+
+        <!-- FILTRO RÁPIDO PARA CONSULTA -->
+        <div class="search-box">
+            <input type="text" id="conjSearch" class="search-input" placeholder="🔍 Digite o conectivo em inglês, tradução ou função (ex: although, embora, contraste, condição, fanboys)..." onkeyup="filterConjunctions()">
+        </div>
+
+        <!-- CONTAINER ONDE AS CATEGORIAS E TABELAS SÃO RENDERIZADAS -->
+        <div id="conjunctions-container"></div>
+
+        <!-- QUIZ INTERATIVO DE FIXAÇÃO -->
+        <section id="quiz-interativo" style="margin-top: 35px;">
+            <h2>Quiz Interativo: Domine as Armadilhas dos Conectivos 🧠</h2>
+            <p>Clique na alternativa correta e veja a explicação gramatical imediatamente:</p>
+            
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <p><strong>1.</strong> Qual conectivo preenche corretamente: "_______ the heavy rain, the flight took off on time." (Note que "the heavy rain" é apenas um substantivo, sem verbo).</p>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q1', 'Although exige sujeito + verbo (ex: Although it rained heavily).')">a) Although</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, true, 'q1', 'Perfeito! Apesar de (Despite / In spite of) é seguido por substantivo ou verbo com -ING.')">b) Despite</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q1', 'Even though também exige sujeito + verbo.')">c) Even though</button>
+                    <div id="feedback-q1" class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>2.</strong> Complete a frase condicional negativa: "You won't pass the exam _______ you study harder." (A menos que / A não ser que)</p>
+                    <button class="quiz-btn" onclick="checkQuiz(this, true, 'q2', 'Correto! Unless significa If... not (A menos que) e já carrega sentido negativo.')">a) unless</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q2', 'As long as significa Contanto que, o que deixaria a frase contraditória.')">b) as long as</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q2', 'Therefore significa Portanto (conclusão), não condição.')">c) therefore</button>
+                    <div id="feedback-q2" class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>3.</strong> Qual par correlativo concorda corretamente na frase: "_______ the manager _______ the employees were informed about the merger."</p>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q3', 'Either faz par com OR (either... or), nunca com nor.')">a) Either ... nor</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, true, 'q3', 'Excelente! Both faz par fixo com AND (Tanto o gerente quanto os funcionários).')">b) Both ... and</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q3', 'Neither faz par com NOR (neither... nor).')">c) Neither ... or</button>
+                    <div id="feedback-q3" class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>4.</strong> Na frase "She studied hard; _______, she got the highest grade in class", qual conectivo formal indica resultado/conclusão?</p>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q4', 'Nevertheless significa No entanto / Mesmo assim (contraste).')">a) nevertheless</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q4', 'Whereas significa Enquanto que / Ao passo que (contraste).')">b) whereas</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, true, 'q4', 'Exato! Therefore (Portanto / Por isso) introduz a conclusão lógica.')">c) therefore</button>
+                    <div id="feedback-q4" class="quiz-feedback"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOTÃO RODAPÉ -->
+        <button class="nav-btn" onclick="window.location.href='https://espaco-liberdade.github.io/inglesipa/'" style="margin-top: 30px;">⬅ Voltar ao Menu Principal</button>
+    </div>
+
+    <script>
+        // BASE COMPLETA DAS CONJUNÇÕES COORDENATIVAS, SUBORDINATIVAS, CORRELATIVAS E ADVÉRBIOS CONJUNTIVOS
+        const conjunctionsData = [
+            {
+                category: "1. Conjunções Coordenativas (Coordinating Conjunctions - FANBOYS)",
+                subtitle: "Unem palavras ou orações independentes de mesmo valor gramatical",
+                tip: "💡 Dica Mnêmica (FANBOYS): For, And, Nor, But, Or, Yet, So. Quando unem duas frases completas (com sujeito e verbo), usamos uma vírgula antes delas!",
+                items: [
+                    ["FOR", "/fɔːr/", "(fór)", "Pois / Porque (Formal)", "Une duas orações explicando o motivo (semelhante a 'because', mas literário).", "He went to bed early, <b>for</b> he was completely exhausted.", "Ele foi para a cama cedo, pois estava completamente exausto."],
+                    ["AND", "/ænd/", "(énd)", "E (Adição)", "Adiciona uma informação que complementa a anterior.", "She speaks English fluently, <b>and</b> she is learning French now.", "Ela fala inglês fluentemente, e está aprendendo francês agora."],
+                    ["NOR", "/nɔːr/", "(nór)", "E nem / Tampouco", "Usado após uma frase negativa; exige inversão do verbo auxiliar!", "He doesn't drink coffee, <b>nor</b> does he drink tea.", "Ele não bebe café, e nem (tampouco) bebe chá."],
+                    ["BUT", "/bʌt/", "(bât)", "Mas / Porém (Contraste)", "O conectivo mais comum para opor duas ideias diretas.", "I wanted to call you, <b>but</b> my phone battery died.", "Eu queria te ligar, mas a bateria do meu celular acabou."],
+                    ["OR", "/ɔːr/", "(ór)", "Ou (Alternativa)", "Apresenta escolha ou consequência caso algo não seja feito.", "We can cook dinner at home, <b>or</b> we can order a pizza.", "Nós podemos fazer o jantar em casa, ou podemos pedir uma pizza."],
+                    ["YET", "/jet/", "(iét)", "Contudo / Mas mesmo assim", "Como conjunção no meio da frase, equivale a um 'but' surpreendente.", "The weather was freezing, <b>yet</b> they decided to swim in the lake.", "O clima estava congelante, contudo eles decidiram nadar no lago."],
+                    ["SO", "/soʊ/", "(sôu)", "Então / Por isso (Resultado)", "Mostra a consequência imediata da primeira frase.", "Traffic was terrible this morning, <b>so</b> I arrived late for work.", "O trânsito estava terrível esta manhã, então cheguei atrasado ao trabalho."]
+                ]
+            },
+            {
+                category: "2. Conjunções Subordinativas de Contraste e Concessão (Contrast & Concession)",
+                subtitle: "Mostram oposição inesperada entre a oração principal e a subordinada",
+                tip: "🚨 Regra de Ouro: 'Although / Even though / Though' exigem SUJEITO + VERBO depois deles. Já 'Despite / In spite of' são preposições e exigem SUBSTANTIVO ou VERBO-ING!",
+                items: [
+                    ["ALTHOUGH", "/ɔːlˈðoʊ/", "(ól-DHÔU)", "Embora / Apesar de que", "Formal. Seguido obrigatoriamente de Sujeito + Verbo.", "<b>Although</b> the exam was difficult, most students passed.", "Embora a prova estivesse difícil, a maioria dos alunos passou."],
+                    ["EVEN THOUGH", "/ˈiːvən ðoʊ/", "(ÍI-vãn dhôu)", "Mesmo que / Embora (Enfático)", "Mais forte que 'although'; destaca um contraste surpreendente.", "He went to work <b>even though</b> he had a high fever.", "Ele foi trabalhar mesmo estando com febre alta."],
+                    ["THOUGH", "/ðoʊ/", "(dhôu)", "Embora / Porém", "Muito versátil: pode ir no início da frase ou no final (significando 'porém').", "<b>Though</b> they are twins, they have very different personalities.", "Embora sejam gêmeos, eles têm personalidades muito diferentes."],
+                    ["WHEREAS", "/ˌwerˈæz/", "(uér-ÉZ)", "Ao passo que / Enquanto que", "Compara dois fatos opostos diretamente (sem noção de tempo).", "She prefers working in the morning, <b>whereas</b> I work better at night.", "Ela prefere trabalhar de manhã, ao passo que eu trabalho melhor à noite."],
+                    ["WHILE (Contraste)", "/waɪl/", "(uáil)", "Enquanto que / Embora", "Além de tempo, é muito usado para contrastar duas realidades.", "<b>While</b> I understand your point, I cannot agree with your decision.", "Embora eu entenda o seu ponto, não posso concordar com sua decisão."],
+                    ["DESPITE", "/dɪˈspaɪt/", "(di-SPÁIT)", "Apesar de (+ Substantivo/-ING)", "NUNCA use 'despite of'! Vai direto para o substantivo ou 'the fact that'.", "<b>Despite</b> the heavy rain, the outdoor concert was a success.", "Apesar da chuva forte, o show ao ar livre foi um sucesso."],
+                    ["IN SPITE OF", "/ɪn spaɪt əv/", "(ên SPÁIT ãv)", "Apesar de (+ Substantivo/-ING)", "Sinônimo exato de 'despite', porém leva a preposição 'of'.", "She got the job <b>in spite of</b> having little experience.", "Ela conseguiu o emprego apesar de ter pouca experiência."]
+                ]
+            },
+            {
+                category: "3. Conjunções Subordinativas de Causa, Motivo e Propósito (Cause & Purpose)",
+                subtitle: "Explicam o porquê de uma ação ou a finalidade com que ela é feita",
+                tip: "💡 Atenção: 'Because / Since / As' são seguidos de Sujeito + Verbo. Já 'Because of / Due to' são seguidos apenas por um substantivo!",
+                items: [
+                    ["BECAUSE", "/bɪˈkɔːz/", "(bi-CÓZ)", "Porque (Explicação/Causa)", "Foca diretamente no motivo; pode iniciar ou ficar no meio da frase.", "We stayed home <b>because</b> a storm was approaching.", "Nós ficamos em casa porque uma tempestade estava se aproximando."],
+                    ["SINCE (Causa)", "/sɪns/", "(sêns)", "Já que / Visto que", "Usado quando o motivo já é conhecido pelos interlocutores.", "<b>Since</b> you are already in the kitchen, could you bring me some water?", "Já que você já está na cozinha, poderia me trazer um pouco de água?"],
+                    ["AS (Causa)", "/æz/", "(éz)", "Como / Já que", "Bastante formal para introduzir uma razão logo no início da frase.", "<b>As</b> it was getting late, we decided to take a taxi home.", "Como estava ficando tarde, decidimos pegar um táxi para casa."],
+                    ["NOW THAT", "/naʊ ðæt/", "(náu dhét)", "Agora que / Já que", "Indica uma nova situação que gera um resultado no presente.", "<b>Now that</b> you have graduated, what are your plans?", "Agora que você se formou, quais são os seus planos?"],
+                    ["BECAUSE OF", "/bɪˈkɔːz əv/", "(bi-CÓZ ãv)", "Por causa de (+ Substantivo)", "Exige um substantivo ou pronome logo após 'of'.", "The flight was canceled <b>because of</b> the thick fog.", "O voo foi cancelado por causa do nevoeiro denso."],
+                    ["DUE TO", "/djuː tuː/", "(diúu túu)", "Devido a (+ Substantivo)", "Mais formal que 'because of'; muito comum em comunicados.", "The store is closed today <b>due to</b> maintenance.", "A loja está fechada hoje devido a manutenção."],
+                    ["SO THAT", "/soʊ ðæt/", "(sôu dhét)", "Para que / A fim de que", "Expressa propósito; geralmente vem seguido de 'can, could, will, would'.", "I spoke slowly <b>so that</b> everyone could understand me.", "Eu falei devagar para que todos pudessem me entender."],
+                    ["IN ORDER TO", "/ɪn ˈɔːrdər tuː/", "(ên ÓR-dãr túu)", "A fim de / Para (+ Verbo)", "Seguidos de verbo na forma base para indicar objetivo claro.", "He woke up at 5 AM <b>in order to</b> catch the first train.", "Ele acordou às 5h a fim de pegar o primeiro trem."]
+                ]
+            },
+            {
+                category: "4. Conjunções Subordinativas de Condição (Conditionals)",
+                subtitle: "Estabelecem regras, hipóteses ou requisitos para que algo aconteça",
+                tip: "🚨 Pegadinha: Não confunda 'IN CASE' (por precaução / vai que...) com 'IF' (apenas se acontecer).",
+                items: [
+                    ["IF", "/ɪf/", "(êf)", "Se (Condição geral)", "Introduz as famosas If-Clauses (Zero, 1st, 2nd e 3rd Conditionals).", "<b>If</b> you heat water to 100 degrees, it boils.", "Se você aquecer a água a 100 graus, ela ferve."],
+                    ["UNLESS", "/ənˈles/", "(ãn-LÉS)", "A menos que / A não ser que", "Equivale a 'If... not'. O verbo seguinte fica na afirmativa!", "You won't get a table <b>unless</b> you make a reservation.", "Você não conseguirá uma mesa a menos que faça uma reserva."],
+                    ["PROVIDED THAT", "/prəˈvaɪdɪd ðæt/", "(prõ-VÁI-dêd dhét)", "Contanto que / Desde que", "Condição formal e restrita (também usado como 'Providing that').", "You can borrow my car <b>provided that</b> you drive carefully.", "Você pode pegar meu carro emprestado contanto que dirija com cuidado."],
+                    ["AS LONG AS", "/æz lɔːŋ æz/", "(éz LONG éz)", "Contanto que / Desde que", "Muito usado na fala para impor uma condição necessária.", "I don't mind where we eat, <b>as long as</b> the food is good.", "Não me importo onde comamos, contanto que a comida seja boa."],
+                    ["EVEN IF", "/ˈiːvən ɪf/", "(ÍI-vãn êf)", "Mesmo se / Ainda que", "Mostra que o resultado não mudará, não importa a condição.", "I will go for a run <b>even if</b> it rains tomorrow.", "Eu vou sair para correr mesmo se chover amanhã."],
+                    ["IN CASE", "/ɪn keɪs/", "(ên KÊIS)", "Caso / Por precaução (Vai que...)", "Indica fazer algo antes, para se prevenir de uma possibilidade.", "Take an umbrella with you <b>in case</b> it rains later.", "Leve um guarda-chuva com você caso chova mais tarde."],
+                    ["WHETHER", "/ˈweðər/", "(UÉ-dhãr)", "Se (Dúvida entre alternativas)", "Usado quando há duas opções (whether... or not).", "I don't know <b>whether</b> she will accept the job offer or not.", "Eu não sei se ela aceitará a oferta de emprego ou não."]
+                ]
+            },
+            {
+                category: "5. Conjunções Subordinativas de Tempo e Sequência (Time & Sequence)",
+                subtitle: "Situam a ordem dos acontecimentos no passado, presente ou futuro",
+                tip: "🚨 Regra das Orações Temporais no Futuro: Após 'when, as soon as, until, before, after, by the time', usamos o verbo no PRESENTE para falar do futuro (Ex: I'll call you when I arrive).",
+                items: [
+                    ["WHEN", "/wen/", "(uén)", "Quando", "Conecta ações simultâneas ou sequenciais.", "I was taking a shower <b>when</b> the doorbell rang.", "Eu estava tomando banho quando a campainha tocou."],
+                    ["WHILE (Tempo)", "/waɪl/", "(uáil)", "Enquanto (Ação contínua)", "Geralmente acompanhado de tempos contínuos (-ING).", "Please don't use your phone <b>while</b> you are driving.", "Por favor, não use o celular enquanto estiver dirigindo."],
+                    ["AS SOON AS", "/æz suːn æz/", "(éz SÚUN éz)", "Assim que / Logo que", "Indica ação imediata após outra acontecer.", "Please text me <b>as soon as</b> you land at the airport.", "Por favor, me mande mensagem assim que pousar no aeroporto."],
+                    ["BY THE TIME", "/baɪ ðə taɪm/", "(bái dhã TÁIM)", "Quando / No momento em que", "Indica que uma ação já estava concluída antes da outra.", "<b>By the time</b> the firemen arrived, the fire had been put out.", "Quando os bombeiros chegaram, o fogo já havia sido apagado."],
+                    ["UNTIL / TILL", "/ənˈtɪl/", "(ãn-TÊL)", "Até que / Até", "Marca o limite de tempo em que uma ação continua ou para.", "Wait here <b>until</b> the green light turns on.", "Espere aqui até que a luz verde se acenda."],
+                    ["ONCE", "/wʌns/", "(uâns)", "Uma vez que / Assim que", "Significa 'a partir do momento em que' algo é concluído.", "<b>Once</b> you understand the pattern, it becomes very easy.", "Uma vez que você entende o padrão, fica muito fácil."],
+                    ["WHENEVER", "/wenˈevər/", "(uén-É-vãr)", "Sempre que / Toda vez que", "Indica repetição ou qualquer momento indiscriminado.", "My dog barks excitedly <b>whenever</b> someone knocks on the door.", "Meu cachorro late empolgado sempre que alguém bate na porta."]
+                ]
+            },
+            {
+                category: "6. Conjunções Correlativas (Correlative Conjunctions - Pares Fixos)",
+                subtitle: "Trabalham sempre em dupla para conectar elementos paralelos na frase",
+                tip: "💡 Atenção à Concordância: Em 'Either... or' e 'Neither... nor', o verbo concorda com o sujeito que estiver MAIS PRÓXIMO dele!",
+                items: [
+                    ["BOTH ... AND", "/boʊθ ... ænd/", "(bôuth ... énd)", "Tanto ... quanto / Ambos ... e", "Soma dois sujeitos; o verbo vai sempre para o plural!", "<b>Both</b> my mother <b>and</b> my father speak Spanish.", "Tanto minha mãe quanto meu pai falam espanhol."],
+                    ["EITHER ... OR", "/ˈiːðər ... ɔːr/", "(ÍI-dhãr ... ór)", "Ou ... ou (Um dos dois)", "Apresenta uma escolha obrigatória entre duas possibilidades.", "You can pay <b>either</b> by credit card <b>or</b> in cash.", "Você pode pagar ou com cartão de crédito ou em dinheiro."],
+                    ["NEITHER ... NOR", "/ˈniːðər ... nɔːr/", "(NÍI-dhãr ... nór)", "Nem ... nem (Nenhum dos dois)", "Nega ambas as opções; o verbo fica na afirmativa!", "<b>Neither</b> John <b>nor</b> his friends were at the party.", "Nem o John nem os amigos dele estavam na festa."],
+                    ["NOT ONLY ... BUT ALSO", "/nɑːt ˈoʊnli ... bʌt ˈɔːlsoʊ/", "(nót ÔUN-li ... bât ÓL-sôu)", "Não apenas ... mas também", "Dá ênfase; se iniciar a frase, inverte o auxiliar como pergunta!", "She is <b>not only</b> intelligent <b>but also</b> very kind.", "Ela não é apenas inteligente, mas também muito gentil."],
+                    ["WHETHER ... OR", "/ˈweðər ... ɔːr/", "(UÉ-dhãr ... ór)", "Quer ... quer / Seja ... ou", "Mostra que algo acontecerá independentemente das duas opções.", "We are leaving at 8 AM, <b>whether</b> you are ready <b>or</b> not.", "Nós sairemos às 8h, quer você esteja pronto quer não."]
+                ]
+            },
+            {
+                category: "7. Advérbios Conjuntivos e Transições Formais (Conjunctive Adverbs)",
+                subtitle: "Conectam parágrafos e ideias complexas (geralmente seguidos de vírgula)",
+                tip: "💡 Pontuação Formal: Geralmente vêm no início de uma nova frase seguidos de vírgula, ou após um ponto e vírgula (; however, / ; therefore,).",
+                items: [
+                    ["HOWEVER", "/haʊˈevər/", "(ráu-É-vãr)", "No entanto / Contudo / Porém", "O substituto formal perfeito para 'but' no início de frases.", "The hotel was expensive; <b>however</b>, the service was impeccable.", "O hotel era caro; no entanto, o serviço era impecável."],
+                    ["NEVERTHELESS", "/ˌnevərðəˈles/", "(né-vãr-dhã-LÉS)", "Mesmo assim / Não obstante", "Contraste elegante; sinônimo exato de 'Nonetheless'.", "There was little chance of winning; <b>nevertheless</b>, they tried.", "Havia pouca chance de vencer; mesmo assim, eles tentaram."],
+                    ["THEREFORE", "/ˈðerfɔːr/", "(DHÉR-for)", "Portanto / Por conseguinte", "Introduz uma conclusão lógica ou científica.", "He didn't meet the requirements; <b>therefore</b>, his application was rejected.", "Ele não cumpriu os requisitos; portanto, sua candidatura foi rejeitada."],
+                    ["FURTHERMORE", "/ˈfɜːrðərmɔːr/", "(FÃR-dhãr-mór)", "Além disso / Ademais", "Adiciona um argumento ainda mais forte (sinônimo: Moreover).", "The house is too small; <b>furthermore</b>, it is far from downtown.", "A casa é muito pequena; além disso, fica longe do centro."],
+                    ["OTHERWISE", "/ˈʌðərwaɪz/", "(Â-dhãr-uáiz)", "Caso contrário / Senão", "Mostra o que acontecerá se a primeira ação não for feita.", "Write down the address; <b>otherwise</b>, you will forget it.", "Anote o endereço; caso contrário, você vai esquecê-lo."],
+                    ["MEANWHILE", "/ˈmiːnwaɪl/", "(MÍIN-uáil)", "Enquanto isso", "Conecta duas ações que ocorrem no mesmo período de tempo.", "The sauce is simmering; <b>meanwhile</b>, let's chop the vegetables.", "O molho está fervendo; enquanto isso, vamos picar os legumes."]
+                ]
+            }
+        ];
+
+        // RENDERIZA TODAS AS CATEGORIAS E TABELAS AUTOMATICAMENTE
+        const container = document.getElementById('conjunctions-container');
+        let htmlOutput = '';
+
+        conjunctionsData.forEach(group => {
+            htmlOutput += `
+            <div class="category-card">
+                <div class="category-header">
+                    <span>${group.category}</span>
+                    <span class="subtitle">${group.subtitle}</span>
+                </div>
+                <div class="category-tip">${group.tip}</div>
+                <table class="conj-table">
+                    <thead>
+                        <tr>
+                            <th>Conectivo (Áudio + IPA)</th>
+                            <th>Tradução / Regra</th>
+                            <th>Exemplo Prático (Áudio + Tradução)</th>
+                        </tr>
+                    </thead>
+                    <tbody>`;
+
+            group.items.forEach(item => {
+                const conjName = item[0];
+                const ipa = item[1];
+                const phonetic = item[2];
+                const meaning = item[3];
+                const ruleNote = item[4];
+                const exampleHtml = item[5];
+                const examplePt = item[6];
+
+                // Limpa parênteses ou reticências para pronunciar o conectivo isolado
+                const cleanConjAudio = conjName.replace(/\(.*?\)/g, '').replace(/\.\.\./g, '').trim().toLowerCase().replace(/'/g, "\\'");
+                const cleanSentenceAudio = exampleHtml.replace(/<\/?b>/g, '').replace(/'/g, "\\'");
+
+                htmlOutput += `
+                        <tr class="conj-row" data-search="${conjName.toLowerCase()} ${meaning.toLowerCase()} ${ruleNote.toLowerCase()} ${group.category.toLowerCase()}">
+                            <td class="col-conj">
+                                ${conjName}
+                                <button class="audio-btn-word" onclick="playAudio('${cleanConjAudio}')" title="Ouvir conectivo">🔊</button>
+                                <br>
+                                <span class="ipa-tag">${ipa}</span>
+                                <span class="phonetic-tag">${phonetic}</span>
+                            </td>
+                            <td class="col-meaning">
+                                ${meaning}
+                                <span class="rule-note">${ruleNote}</span>
+                            </td>
+                            <td class="col-example">
+                                <span class="example-en">${exampleHtml}</span>
+                                <button class="audio-btn-inline" onclick="playAudio('${cleanSentenceAudio}')" title="Ouvir frase">🔊</button>
+                                <span class="example-pt">${examplePt}</span>
+                            </td>
+                        </tr>`;
+            });
+
+            htmlOutput += `
+                    </tbody>
+                </table>
+            </div>`;
+        });
+
+        container.innerHTML = htmlOutput;
+
+        // FUNÇÃO DE BUSCA RÁPIDA POR CONECTIVO OU TRADUÇÃO
+        function filterConjunctions() {
+            const query = document.getElementById('conjSearch').value.toLowerCase();
+            const cards = document.querySelectorAll('.category-card');
+
+            cards.forEach(card => {
+                const rows = card.querySelectorAll('.conj-row');
+                let hasVisibleRow = false;
+
+                rows.forEach(row => {
+                    const text = row.getAttribute('data-search');
+                    if (text.includes(query)) {
+                        row.style.display = '';
+                        hasVisibleRow = true;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+
+                card.style.display = hasVisibleRow ? 'block' : 'none';
+            });
+        }
+
+        // FUNÇÃO DO QUIZ INTERATIVO
+        function checkQuiz(button, isCorrect, qId, explanation) {
+            const parent = button.parentElement;
+            const buttons = parent.querySelectorAll('.quiz-btn');
+            buttons.forEach(btn => btn.disabled = true);
+
+            const feedback = document.getElementById('feedback-' + qId);
+            feedback.style.display = 'block';
+
+            if (isCorrect) {
+                button.classList.add('correct');
+                feedback.innerHTML = "✅ " + explanation;
+                feedback.style.color = "#155724";
+            } else {
+                button.classList.add('incorrect');
+                buttons.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correct');
+                    }
+                });
+                feedback.innerHTML = "❌ " + explanation;
+                feedback.style.color = "#721c24";
+            }
+        }
+
+        // SCRIPT DE VOZ (WEB SPEECH API)
+        let voices = [];
+        function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+        loadVoices();
+        if (window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+        }
+
+        function playAudio(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.rate = 0.85;
+                utterance.pitch = 1;
+
+                if (voices.length === 0) loadVoices();
+                let targetVoice = voices.find(voice => 
+                    (voice.name.includes('Google') || voice.name.includes('Premium') || voice.name.includes('Samantha')) 
+                    && voice.lang.includes('en-US')
+                );
+                if (!targetVoice) targetVoice = voices.find(voice => voice.lang === 'en-US');
+                if (!targetVoice) targetVoice = voices.find(voice => voice.lang.startsWith('en'));
+
+                if (targetVoice) {
+                    utterance.voice = targetVoice;
+                    utterance.lang = targetVoice.lang;
+                } else {
+                    utterance.lang = 'en-US';
+                }
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    </script>
+</body>
+</html>
